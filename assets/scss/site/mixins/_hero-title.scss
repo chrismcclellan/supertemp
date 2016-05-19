@@ -1,0 +1,29 @@
+@mixin supertemp-hero-title() {
+
+    @media #{$medium-up} {
+      max-width: 100%;
+      font-size: rem-calc(52);
+      position: absolute;
+      display: inline-block;
+      bottom: 100%;
+      left: 0;
+      z-index: 1;
+      margin-bottom: $baseSpace*1.5;
+      letter-spacing: -.1rem;
+    }
+
+    @media #{$large-up} {
+      max-width: 80%;
+      font-size: rem-calc(60);
+    }
+
+    @media #{$xlarge-up} {
+      max-width: 70%;
+      font-size: rem-calc(64);
+    }
+
+    @media #{$xxlarge-up} {
+      max-width: 60%;
+      font-size: rem-calc(68);
+    }
+}

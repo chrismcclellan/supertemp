@@ -1,0 +1,13 @@
+body.search {
+  
+  .search-query-wrapper {
+    padding-top: 3em;
+    padding-bottom: 3rem;
+
+    span {
+      padding: 0 $baseSpace/3;
+      background-color: rgba($gray-lightest, .5);
+      font-weight: 500;
+    }
+  }
+}

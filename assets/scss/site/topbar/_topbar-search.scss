@@ -1,0 +1,61 @@
+.top-bar .top-bar-search {
+    @include grid-column(6, true, false, 0, 0, 0, true, right);
+    // @media #{$medium-up} { @include grid-column(4, true, false, 0, 0, 0, true, right); }
+    @media #{$large-up} { @include grid-column(4, true, false, 0, 0, 0, true, right); }
+    @media #{$small-up} { .top-bar-search {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }}
+
+    .columns {
+      width: auto !important;
+    }
+
+    .search-field {
+      width: 100% !important;
+    }
+
+    .search-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $topbar-height;
+    }
+
+    input {
+      display: block;
+      top: 0;
+      height: $topbar-height;
+      width: 100%;
+      padding: 0 $topbar-height+($baseSpace*2) 0 $baseSpace*2;
+      border: 0 none;
+      background-color: #ebebeb;
+      font-family: $font-family-sans-serif;
+      font-size: 1.3rem;
+
+      &::-webkit-input-placeholder { color: $gray-light !important; }
+      &::-moz-placeholder { color: $gray-light !important; }
+      &:-moz-placeholder { color: $gray-light !important; }
+      &:-ms-input-placeholder { color: $gray-light !important; }
+    }
+
+    input[type="submit"] {
+      width: 80px;
+      margin: 0;
+      padding: 0;
+      color: transparent;
+      background: #000 url('../images/search-line-icon.svg') no-repeat center center;
+      background-size: 34px auto;
+
+      @include transition(all .3s);
+
+      // @include transition-property(all);
+      // @include transition-duration(100ms);
+
+      &:hover {
+        background-color: $gray-darkest;
+        background-size: 36px auto;
+      }
+    }
+}

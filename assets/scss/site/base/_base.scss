@@ -1,0 +1,54 @@
+
+
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  clear: both;
+  display: block; 
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+
+// Document layout styles
+.container {
+  @include grid-row();
+  position: relative;
+  width: 100%;
+  max-width: none;
+}
+
+
+body {
+
+  // paragraphs
+  p {
+    font-family: $font-family-serif;
+    font-size: 1.125rem;
+    letter-spacing: .04rem;
+    line-height: 1.9rem;
+    color: rgba($black, 1);
+    margin-bottom: 1.5rem;
+  }
+  
+  // anchors
+  p a,
+  li a {
+    color: $color-secondary;
+    @include transition(color .3s);
+    
+    &:hover,
+    &:active,
+    &:visited {
+      color: $color-secondary;
+    }
+  }
+  
+  // highlighter
+  span.highlighter {
+    padding: 2px 6px;
+    background-color: $color-yellow;
+  }
+}

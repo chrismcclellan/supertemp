@@ -1,0 +1,198 @@
+/**
+* Reference
+---------------------------
+* Post Title
+* Teaser
+* Timestamp
+* First Post
+* - Thumbnail
+* - Post Title
+* - Teaser
+* - Timestamp
+*
+*/
+
+
+// body.blog:not(.home) {
+body.blog {
+
+  .river {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .post-teaser {
+    margin-bottom: 3rem;
+    margin-left: 0;
+    position: relative;
+    @include clearfix();
+
+    @media #{$medium-up} {
+      margin-left: $datestamp_width;
+      padding-right: $baseSpace;
+    }
+
+    .post-thumb,
+    .thumbnail {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      float: none;
+      width: 100%;
+
+      @media #{$medium-up} {
+        float: left;
+        width: 40%;
+        height: 100%;
+      }
+    }
+
+    .post-content {
+      display: block;
+      width: 100%;
+      padding: 0 20px;
+
+      @media #{$medium-up} {
+        float: left;
+        width: 60%;
+      }
+
+      p {
+        max-height: 28.8px * 3;
+        overflow: hidden;
+      }
+    }
+    
+    header {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      overflow: visible;
+    }
+
+/**
+* Post title
+********************************************* */
+     .post-title {
+       @media #{$small-only} {
+        position: absolute;
+        bottom: 100%;
+      }
+     }
+
+/**
+* Teaser
+********************************************* */
+    .entry-content {
+      @media #{$medium-up} { max-width: 92%; }
+
+      p {
+        font-family: $font-family-serif;
+        font-size: rem-calc(18);
+      }
+    }
+
+/**
+* Timestamp
+********************************************* */
+    .updated {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      width: $datestamp_width;
+      font-family: $font-family-sans-condensed;
+      text-transform: uppercase;
+      line-height: 1em;
+      font-weight: 300 !important;
+      color: $black;
+
+      @media #{$medium-up} { display: block; }
+      
+      span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .month { font-size: 18px !important; line-height: 1em; }
+      .day { font-size: 35px !important; line-height: 1em; }
+      .year { font-size: 16px !important; line-height: 1.3em; }
+    }
+
+    
+/**
+* First Post
+********************************************* */
+
+    &.index-0 {
+      @media #{$medium-up} { margin-bottom: $baseSpace*1.6; }
+
+      .hero {
+        display: none;
+        @media #{$medium-up} { display: block; margin-left: -($datestamp_width); }
+      }
+
+      .post-content {
+
+        @media #{$medium-up} {
+          padding: 0;
+          width: 100%;
+        }
+        
+        p {
+          @media #{$medium-up} {
+            max-height: 48px * 3;
+          }
+        }
+      }
+
+    /**
+    * Thumbnail
+    ********************************************* */
+      .post-thumb {
+        @media #{$medium-up} { display: none; }
+      }
+
+    /**
+    * Post Title
+    ********************************************* */
+        .post-title {
+          @include supertemp-hero-title();
+        }
+
+
+    /**
+    * Teaser
+    ********************************************* */
+        .entry-content {
+          margin-top: 1.25rem;
+
+          @include grid-column(12, false, false, 0, 0, 0, true);
+
+          @media #{$xxlarge-up} { @include grid-column(7, false, false, 0, 0, 0, true); }
+          @media #{$xlarge-up} { @include grid-column(8, false, false, 0, 0, 0, true); }
+          @media #{$large-up} {  @include grid-column(9, false, false, 0, 0, 0, true); }
+          @media #{$medium-up} { @include grid-column(10, false, false, 0, 0, 0, true); }
+
+          p {
+            @media #{$medium-up} { max-height: none; font-size: rem-calc(22); }
+            @media #{$large-up} { font-size: rem-calc(26); }
+          }
+        } // .entry-content
+
+    /**
+    * Timestamp
+    ********************************************* */
+        footer { position: relative; }
+        .updated {
+          margin-top: $baseSpace;
+        }
+
+
+    } //  &.index-0
+
+  } // .post
+
+} // body.blog

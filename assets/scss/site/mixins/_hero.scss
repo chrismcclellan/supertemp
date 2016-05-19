@@ -1,0 +1,8 @@
+@mixin supertemp-hero($rule) {
+  @media #{$small-up} { #{$rule}: 50vh; }
+  @media #{$medium-up} { #{$rule}: 60vh; }
+  @media #{$large-up} { #{$rule}: 75vh; }
+  @media #{$xlarge-up} { #{$rule}: 80vh; }
+}
+
+// #hero { @include supertemp-hero("margin-top"); }

@@ -1,0 +1,57 @@
+body.single,
+body.page {
+
+  .share-wrapper {
+
+    .share {
+      white-space: nowrap;
+      padding: $baseSpace/2;
+
+      .text-label {
+        visibility: visible;
+        display: inline-block;
+        vertical-align: middle;
+        text-transform: uppercase;
+        padding-right: .75rem;
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+    
+      @media #{$large-up} {
+        position: absolute;
+        top: 2rem;
+        right: 0;
+
+        .text-label { visibility: hidden; }
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url('../images/share-icon-off.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &:hover {
+        color: $color-secondary;
+        &:after { background-image: url('../images/share-icon-on.svg'); }
+        .text-label { visibility: visible; }
+      }
+    }
+  }
+
+  .tabs-content + .share-wrapper,
+  .content-wrapper + .share-wrapper {
+
+    .share {
+      @media #{$large-up} {
+        top: auto;
+        bottom: 2rem;
+      }
+    }
+  }
+}

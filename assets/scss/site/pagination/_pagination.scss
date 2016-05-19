@@ -1,0 +1,40 @@
+.pagination {
+  margin: $baseSpace*3 0;
+
+  .pagination {
+    margin: 0;
+    padding: 0;
+    height: auto;
+
+    li {
+      margin: 0;
+      margin-right: .8rem;
+      font-size: 1rem;
+      font-family: $font-family-sans-serif;
+
+      a {
+        border: 1px solid transparent;
+        color: $color-secondary;
+        padding: 8px 16px;
+        @include border-radius(0);
+      }
+
+      &.current a {
+        color: $white;
+      }
+    }
+
+    li:not(.current) a {
+
+      &:hover {
+        border: 0 none;
+        background-color: $white;
+        border: 1px solid $gray-light;
+      }
+    }
+  }
+}
+
+body.home .pagination {
+  margin-left: rem-calc(30);
+}

@@ -1,0 +1,31 @@
+.widget.widget_supertemp_plugin_editorsnote {
+
+  .note-wrapper {
+    margin: $baseSpace*1.5 0;
+  }
+
+  p {
+    font-family: $font-family-serif;
+  }
+
+  .editor-thumb {
+    margin: 0 $baseSpace*1.5;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    @include border-radius(50%);
+    
+    img {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: auto;
+    }
+  }
+
+  .read-more {
+    a { color: #d11f9d; }
+    a:hover { text-decoration: underline; }
+  }
+
+}

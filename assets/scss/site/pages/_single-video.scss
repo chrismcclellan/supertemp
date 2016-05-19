@@ -1,0 +1,48 @@
+body.single-format-video {
+
+  // .play-button {
+  //   display: block;
+  //   width: 100px;
+
+  //   svg, img {
+  //     display: block;
+  //     max-width: 100%;
+  //     width: 100%;
+  //     height: auto;
+  //   }
+  // }
+
+  .hero {
+
+    .video {
+      background-color: rgba($black, 0);
+      @include transition(background-color .3s);
+    }
+
+  }
+}
+
+body.single-format-video.play-video {
+
+  .post-title {
+    position: relative;
+    margin: 1.75rem 0 0 0;
+  }
+
+  .video {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba($black, 1);
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

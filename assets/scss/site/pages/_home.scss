@@ -1,0 +1,80 @@
+body.home {
+
+  $teaser-padding: 2rem;
+  
+  .post-teaser {
+    padding: 0 $teaser-padding;
+    margin-bottom: $teaser-padding;
+    position: relative;
+
+
+    /**
+    * Hero
+    ********************************************* */
+    &:first-child {
+      .hero { margin-left: -($teaser-padding); }
+    }
+
+
+    /**
+    * Thumbnail
+    ********************************************* */
+    .thumbnail-wrapper {
+      
+      .thumbnail {
+        display: block;
+        width: 100%;
+        max-height: 60vh;
+        overflow: hidden;
+        background-color: $black;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        img {
+          opacity: 0;
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &:first-child {
+      .thumbnail-wrapper { display: none; }
+    }
+
+    /**
+    * Post Title
+    ********************************************* */
+    .post-title {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      margin-top: 0;
+      width: auto;
+      display: inline-block;
+      font-size: rem-calc(26);
+      text-transform: uppercase;
+      font-family: $font-family-sans-condensed;
+      font-weight: 700;
+      white-space: normal;
+
+      @media #{$medium-up} { font-size: rem-calc(26); margin-bottom: $baseSpace/2; }
+      @media #{$large-up} { font-size: rem-calc(30); }
+      @media #{$xlarge-up} { font-size: rem-calc(34); }
+
+      a {
+        padding: 0 6px;
+        background: $highlighter-1;
+      }
+    }
+
+    /**
+    * Timestamp
+    ********************************************* */
+
+
+  } // .post-teaser
+
+} // body.home

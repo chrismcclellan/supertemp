@@ -1,0 +1,46 @@
+.top-bar .title-area {
+  @media #{$small-up} { display: inline-block; }
+  @media #{$medium-up} { display: inline-block; }
+}
+
+.top-bar .name {
+
+	a {
+		position: relative;
+		overflow: hidden !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 100% !important;
+	}
+
+	img {
+		display: block;
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	svg {
+		display: block;
+		fill: #000000;
+	}
+}
+
+.svgclippaths .top-bar .name {
+	overflow: hidden;
+
+	img {
+		display: block;
+		-webkit-clip-path: url(#logo-svg);
+		   -moz-clip-path: url(#logo-svg);
+		    -ms-clip-path: url(#logo-svg);
+		     -o-clip-path: url(#logo-svg);
+            clip-path: url(#logo-svg);
+	}
+
+	svg {
+		position: absolute;
+		top: 0;
+		left: 100000px;
+	}
+}

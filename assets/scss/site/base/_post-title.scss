@@ -1,0 +1,23 @@
+/**
+*  Post Title
+********************************************* */
+  .post-title {
+    margin-top: 0;
+    width: auto;
+    display: inline-block;
+    font-size: rem-calc(26);
+    text-transform: uppercase;
+    font-family: $font-family-sans-condensed;
+    font-weight: 700;
+    white-space: normal;
+
+    @media #{$medium-up} { font-size: rem-calc(26); margin-bottom: $baseSpace/2; }
+    @media #{$large-up} { font-size: rem-calc(30); }
+    @media #{$xlarge-up} { font-size: rem-calc(34); }
+
+    > a,
+    > span {
+      padding: 0 6px;
+      background: $highlighter-1;
+    }
+  }

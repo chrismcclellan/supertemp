@@ -1,0 +1,33 @@
+body.single,
+body.page {
+
+
+  /**
+  *  Post Title
+  ********************************************* */
+
+  .post-title-wrapper {
+    
+    @media #{$small-only} {
+      padding-top: 1rem;
+    }
+
+    .post-title {
+      margin-top: 0;
+      width: auto;
+      display: inline;
+      font-size: rem-calc(26);
+      text-transform: uppercase;
+      font-family: $font-family-sans-condensed;
+      font-weight: 700;
+      white-space: normal;
+
+      @include supertemp-hero-title();
+
+      span {
+        padding: 0 6px;
+        background: $highlighter-1;
+      }
+    }
+  }
+} 

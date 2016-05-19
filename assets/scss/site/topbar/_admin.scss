@@ -1,0 +1,28 @@
+.top-bar .admin {
+  display: none;
+  
+  li {
+    white-space: nowrap;
+
+    &:first-child {
+      // margin-left: $baseSpace/2;
+    }
+
+    a {
+      color: $gray-darkest;
+      padding: 0 $baseSpace/1.4 !important;
+      white-space: nowrap;
+    }
+  
+    .line-icon {
+      font-size: 1.35rem;
+      vertical-align: middle;
+      margin-top: -4px;
+    }
+
+    span {
+      float: right;
+      padding-left: 8px;
+    }
+  }
+}

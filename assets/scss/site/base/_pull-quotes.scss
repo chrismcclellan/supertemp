@@ -1,0 +1,108 @@
+body.single,
+body.page,
+body.attachment {
+
+  $pad: $baseSpace*1.5;
+
+  .pullquote {
+    position: relative;
+    margin: .75rem 0;
+    width: 50%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 6px;
+      width: 33%;
+      background-color: $color-tertiary;
+    }
+
+    /* Reset <blockquote> element */
+    blockquote,
+    blockquote p {
+      padding: 0;
+      margin: 0;
+    }
+
+    blockquote {
+      border: 0 none;
+      padding: $pad;
+
+      p {
+        font-family: $font-family-sans-serif;
+        font-size: 1.8rem;
+        line-height: 1.45;
+        font-weight: 300;
+      }
+
+      footer {
+        margin-top: $baseSpace/2;
+
+        cite {
+          font-size: 1rem;
+          color: $gray-light;
+          font-style: italic;
+
+          a {
+            display: inline-block;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+
+    // Sizes
+    // =================================
+    &.size-medium {
+      blockquote {
+        p { font-size: 1.6rem; }
+      }
+    }
+
+    &.size-large {
+      blockquote {
+        p { font-size: 2rem; }
+      }
+    }
+
+    &.size-x-large {
+      blockquote {
+        p { font-size: 2.2rem; }
+      }
+    }
+
+    // Alignment
+    // =================================
+    &.pull-left {
+      float: left;
+      @media #{$xlarge-up} { margin-left: -12.5%; }
+      blockquote { padding-left: 0; }
+    }
+
+    &.pull-right {
+      float: right;
+      @media #{$large-up} { margin-right: -12.5%; }
+      &:before { left: auto; right: 0; }
+      blockquote {
+        text-align: right;
+        padding-right: 0;
+      }
+    }
+
+    &.pull-full {
+      width: 100%;
+      float: none;
+      border-left: 6px solid $color-tertiary;
+      margin: $baseSpace*1.5 0;
+
+      &:before { display: none; }
+      blockquote {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

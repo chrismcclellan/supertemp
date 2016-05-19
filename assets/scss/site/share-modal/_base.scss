@@ -1,0 +1,137 @@
+#share-modal {
+  margin: 0;
+  padding: 2em;
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  @include transform(translateY(-50%) translateX(-50%));
+
+  @media #{$medium-up} { width: 60%; }
+  @media #{$large-up} { width: 50%; }
+  @media #{$xlarge-up} { width: 40%; }
+  @media #{$xxlarge-up} { width: 30%; }
+
+  // feature image
+  .hero {
+    max-width: 100%;
+    width: 100%;
+    height: auto !important;
+    background-repeat: no-repeat;
+  }
+
+  .modal-title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2rem;
+    font-family: $font-family-sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 900 !important;
+  }
+  
+  // post title
+  .post-title {
+    font-size: 1.75rem;
+    margin: 2rem 0 0;
+    position: relative;
+
+    @media #{$large-up} {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      margin: 0 2rem 2rem;
+    }
+  }
+
+  // Copy link
+  .copy-link-wrapper {
+    margin: 2rem 0;
+
+    input {
+      margin: 0;
+      padding: 0 $baseSpace*1.5 0 $baseSpace;
+      @include box-shadow(0 0 0 rgba(0, 0, 0, 0));
+      border-color: $gray-light;
+      border-right: 0 none;
+    }
+
+    button {
+      margin: 0;
+      background-color: $white;
+      color: $gray;
+      border: 1px solid $gray-light;
+      border-left: 1px dotted $gray-light;
+
+      &.zerclipboard-is-hover {
+        color: $color-green;
+      }
+    }
+
+    input,
+    button {
+      height: $baseSpace*2;
+      line-height: $baseSpace*2;
+    }
+  }
+
+  // Social links
+  .share-links-wrapper {
+
+    ul {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      padding: 0 $baseSpace/1.5;
+      font-size: .8rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a > * {
+        display: inline;
+        float: left;
+      }
+    }
+
+    .line-icon {
+      vertical-align: bottom;
+      font-size: 1.2rem;
+      padding-right: $baseSpace/3;
+      // margin-top: $baseSpace/6;
+    }
+  }
+
+  $s: 2rem;
+  .close {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    z-index: 999;
+    width: $s;
+    height: $s;
+    border: 1px solid rgba($black, .2);
+    color: rgba($black, .6);
+    text-align: center;
+    line-height: $s;
+    overflow: hidden;
+    font-size: .85rem;
+    margin-top: -($s/2);
+    margin-right: 0;
+    @include border-radius(50%);
+    @include transition(all .3s);
+
+    &:hover {
+      color: $white;
+      border-color: transparent;
+      background-color: $color-red;
+      @include transform(scale(1.15));
+    }
+  }
+}
